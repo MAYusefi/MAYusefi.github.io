@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical skills of Mohammad Ali Yusefi - Full-Stack Business System Engineer specializing in SaaS platforms, admin panels, dashboards with Next.js, React, TypeScript & Firebase." />
+  <title>Skills | Mohammad Ali Yusefi - Full-Stack Business System Engineer</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/mobile-fixes.css" />
+  
+  <!-- Simple Icons for brand logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v6/font/simple-icons.min.css" />
+  
+  <style>
+    /* Brand icon styling */
+    .brand-icon {
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .brand-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+    .skill-card { transition: all var(--transition-base); }
+    .skill-card:hover { transform: translateY(-8px); }
+    .skill-item {
+      display: flex; align-items: center; gap: 1rem; padding: 1rem;
+      background: var(--color-surface); border-radius: var(--radius-lg);
+      margin-bottom: 0.75rem; transition: all var(--transition-base);
+    }
+    .skill-item:hover { background: var(--color-surface-hover); transform: translateX(8px); }
+    .skill-icon {
+      font-size: 2rem; width: 50px; height: 50px; display: flex;
+      align-items: center; justify-content: center;
+      background: var(--color-primary); border-radius: var(--radius-md); flex-shrink: 0;
+    }
+    .skill-level { height: 6px; background: var(--color-surface); border-radius: var(--radius-full); overflow: hidden; margin-top: 0.5rem; }
+    .skill-level-fill { height: 100%; background: var(--color-primary-gradient); border-radius: var(--radius-full); transition: width 1s ease-out; }
+    .category-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--color-border); }
+    .category-icon { font-size: 2.5rem; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: var(--color-primary-gradient); border-radius: var(--radius-xl); }
+    .category-title { font-size: 1.5rem; font-weight: 700; }
+    .category-subtitle { color: var(--color-text-secondary); font-size: 0.9rem; margin-top: 0.25rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    @media (max-width: 768px) { .skills-grid { grid-template-columns: 1fr; } }
+    .highlight-card { border: 2px solid var(--color-primary); background: rgba(124, 58, 237, 0.08); }
+    .section-divider { display: flex; align-items: center; gap: 1rem; margin: 3rem 0; }
+    .section-divider::before, .section-divider::after { content: ''; flex: 1; height: 2px; background: linear-gradient(90deg, transparent, var(--color-border), transparent); }
+    .section-divider span { color: var(--color-text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; }
+    
+    /* Quick Navigation Styles */
+    .skills-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 2rem 0 3rem;
+      padding: 1.5rem;
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--color-border);
+    }
+    .skills-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      color: var(--color-text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all var(--transition-base);
+      cursor: pointer;
+    }
+    .skills-nav-item:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    }
+    .skills-nav-item svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    @media (max-width: 768px) {
+      .skills-nav { gap: 0.5rem; padding: 1rem; }
+      .skills-nav-item { padding: 0.5rem 0.9rem; font-size: 0.75rem; }
+      .skills-nav-item svg { width: 14px; height: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-brand">Mohammad Ali Yusefi</a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="resume.html" class="nav-link">Resume</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="skills.html" class="nav-link active">Skills</a></li>
+          <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle"><svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg><svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1z"/></svg></button>
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle"><span></span><span></span><span></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h1 class="section-title">Technical Expertise</h1>
+          <p class="section-subtitle">Full-Stack Business System Engineer | Building SaaS Platforms, Admin Panels & Data-Driven Dashboards</p>
+        </div>
+
+        <!-- Quick Navigation Menu -->
+        <nav class="skills-nav reveal" aria-label="Skills sections navigation">
+          <a href="#engineering" class="skills-nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Core Engineering
+          </a>
+          <a href="#development" class="skills-nav-item">
+            <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+            Software Development
+          </a>
+          <a href="#ai-tools" class="skills-nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5z"/></svg>
+            AI & Intelligent Tools
+          </a>
+          <a href="#security" class="skills-nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            Security & Infrastructure
+          </a>
+          <a href="#business" class="skills-nav-item">
+            <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+            Business & Finance
+          </a>
+          <a href="#productivity" class="skills-nav-item">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            Productivity & Design
+          </a>
+          <a href="#systems" class="skills-nav-item">
+            <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+            Systems & Languages
+          </a>
+        </nav>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- SECTION 1: CORE ENGINEERING -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        
+        <div id="engineering" class="section-divider reveal"><span>Core Engineering</span></div>
+
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66l.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15L11 21z"/></svg></div>
+            <div>
+              <div class="category-title">Electrical Engineering & Simulation</div>
+              <div class="category-subtitle">Power systems design, renewable energy, and engineering software</div>
+            </div>
+          </div>
+          
+          <div class="skills-grid">
+            <div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #E74C3C, #C0392B);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>AutoCAD (Electrical Design)</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Expert</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 92%;"></div></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #0076A8, #00A3E0);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>MATLAB / Simulink</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 88%;"></div></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #6366F1, #8B5CF6);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>PowerWorld Simulator</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 78%;"></div></div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #F39C12, #E67E22);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>PVsyst (Solar PV Design)</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Expert</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 90%;"></div></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #00979D, #00BCD4);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>Proteus / Circuit Design</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 75%;"></div></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #FFC107, #FF9800);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>ETAP (Power Analysis)</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 70%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- SECTION 2: SOFTWARE DEVELOPMENT -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        
+        <div id="development" class="section-divider reveal"><span>Software Development</span></div>
+
+        <!-- Full-Stack Web Development -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #3498DB, #2980B9);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+            <div>
+              <div class="category-title">Full-Stack Web Development</div>
+              <div class="category-subtitle">Cloud-native, scalable systems using modern full-stack architecture</div>
+            </div>
+          </div>
+          
+          <!-- Core Stack Banner -->
+          <div style="background: linear-gradient(135deg, #000, #1a1a2e); color: white; padding: 1rem 1.5rem; border-radius: var(--radius-lg); margin-bottom: 1.5rem;">
+            <h4 style="margin: 0 0 0.5rem 0; color: #61DAFB;">⚛️ Core Stack</h4>
+            <div class="flex gap-2" style="flex-wrap: wrap;">
+              <span class="badge" style="background: #000; border: 1px solid #fff; color: #fff;">Next.js (App Router)</span>
+              <span class="badge" style="background: #61DAFB; color: #000;">React</span>
+              <span class="badge" style="background: #3178C6; color: #fff;">TypeScript</span>
+              <span class="badge" style="background: #F7DF1E; color: #000;">JavaScript</span>
+              <span class="badge" style="background: #FFCA28; color: #000;">Firebase</span>
+              <span class="badge" style="background: #38BDF8; color: #000;">Tailwind CSS</span>
+            </div>
+          </div>
+          
+          <h4 style="color: var(--color-primary-light); margin-bottom: 1rem;">Front-End Technologies</h4>
+          <div class="skills-grid" style="margin-bottom: 1.5rem;">
+            <div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #E44D26, #F16529);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>HTML5 / CSS3 / JavaScript</strong>
+                    <span class="badge badge-primary" style="font-size: 0.7rem;">Advanced</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 80%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #61DAFB, #00D8FF);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>React.js / Vue.js</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 72%;"></div></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #38BDF8, #0EA5E9);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>Tailwind CSS / Bootstrap / SASS</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 78%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #5A0FC8, #7B2FF7);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M18.5 1.311l-6.5 3.75v7.5l6.5-3.75v-7.5zm-13 0v7.5l6.5 3.75v-7.5l-6.5-3.75zm6.5 11.25l-6.5-3.75v7.5l6.5 3.75v-7.5zm.5 0v7.5l6.5-3.75v-7.5l-6.5 3.75z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>Responsive Design / PWA</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 75%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="divider-gradient" style="margin: 1.5rem 0;"></div>
+          
+          <h4 style="color: var(--color-secondary-light); margin-bottom: 1rem;">⚙️ Back-End Technologies</h4>
+          <div class="skills-grid">
+            <div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #3776AB, #FFD43B);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>Python (Django / Flask / FastAPI)</strong>
+                    <span class="badge" style="font-size: 0.7rem;">Intermediate</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 60%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #339933, #68A063);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>Node.js / Express.js</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 68%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #777BB4, #8892BF);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zm-2.595-1.382h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>PHP / Laravel</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 55%;"></div></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #336791, #4479A1);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M23.562 15.063c-.203-.406-.61-.656-1.094-.656-.125 0-.25.016-.375.047l-1.5.375c-.656.156-1.328.234-2 .234-1.547 0-3.063-.453-4.375-1.313-.25-.156-.5-.328-.734-.516.078-.078.156-.156.234-.25.5-.547.922-1.156 1.25-1.813.078-.156.156-.328.219-.5.047-.125.094-.25.125-.375.031-.094.063-.188.078-.281.016-.063.031-.125.047-.188.016-.078.031-.156.047-.234.016-.094.031-.188.031-.281.016-.125.016-.25.016-.375 0-.125 0-.25-.016-.375-.016-.094-.016-.188-.031-.281-.016-.078-.031-.156-.047-.234-.016-.063-.031-.125-.047-.188-.016-.094-.047-.188-.078-.281-.031-.125-.078-.25-.125-.375-.063-.172-.141-.344-.219-.5-.328-.656-.75-1.266-1.25-1.813-.078-.094-.156-.172-.234-.25.234-.188.484-.359.734-.516 1.313-.859 2.828-1.313 4.375-1.313.672 0 1.344.078 2 .234l1.5.375c.125.031.25.047.375.047.484 0 .891-.25 1.094-.656.203-.406.156-.891-.125-1.25l-.938-1.188c-.5-.625-1.094-1.172-1.75-1.625-1.313-.906-2.844-1.391-4.438-1.391-1.078 0-2.141.188-3.141.563-.5.188-.984.422-1.438.688-.453-.266-.938-.5-1.438-.688-1-.375-2.063-.563-3.141-.563-1.594 0-3.125.484-4.438 1.391-.656.453-1.25 1-1.75 1.625l-.938 1.188c-.281.359-.328.844-.125 1.25.203.406.61.656 1.094.656.125 0 .25-.016.375-.047l1.5-.375c.656-.156 1.328-.234 2-.234 1.547 0 3.063.453 4.375 1.313.25.156.5.328.734.516-.078.078-.156.156-.234.25-.5.547-.922 1.156-1.25 1.813-.078.156-.156.328-.219.5-.047.125-.094.25-.125.375-.031.094-.063.188-.078.281-.016.063-.031.125-.047.188-.016.078-.031.156-.047.234-.016.094-.031.188-.031.281-.016.125-.016.25-.016.375 0 .125 0 .25.016.375.016.094.016.188.031.281.016.078.031.156.047.234.016.063.031.125.047.188.016.094.047.188.078.281.031.125.078.25.125.375.063.172.141.344.219.5.328.656.75 1.266 1.25 1.813.078.094.156.172.234.25-.234.188-.484.359-.734.516-1.313.859-2.828 1.313-4.375 1.313-.672 0-1.344-.078-2-.234l-1.5-.375c-.125-.031-.25-.047-.375-.047-.484 0-.891.25-1.094.656-.203.406-.156.891.125 1.25l.938 1.188c.5.625 1.094 1.172 1.75 1.625 1.313.906 2.844 1.391 4.438 1.391 1.078 0 2.141-.188 3.141-.563.5-.188.984-.422 1.438-.688.453.266.938.5 1.438.688 1 .375 2.063.563 3.141.563 1.594 0 3.125-.484 4.438-1.391.656-.453 1.25-1 1.75-1.625l.938-1.188c.281-.359.328-.844.125-1.25z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>MySQL / PostgreSQL / MongoDB</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 70%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #E535AB, #FF6B9D);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12.002 0a2.138 2.138 0 1 0 0 4.277 2.138 2.138 0 1 0 0-4.277zm8.54 4.931a2.138 2.138 0 1 0 0 4.277 2.138 2.138 0 1 0 0-4.277zm0 9.862a2.138 2.138 0 1 0 0 4.277 2.138 2.138 0 1 0 0-4.277zm-8.54 4.931a2.138 2.138 0 1 0 0 4.276 2.138 2.138 0 1 0 0-4.276zm-8.542-4.93a2.138 2.138 0 1 0 0 4.276 2.138 2.138 0 1 0 0-4.277zm0-9.863a2.138 2.138 0 1 0 0 4.277 2.138 2.138 0 1 0 0-4.277zm8.542-3.378L2.953 6.777v10.448l9.049 5.224 9.049-5.224V6.777zm0 1.601l7.66 4.422-3.473 2.006-4.187-2.418zm-7.66 4.422l7.66-4.422v4.836l-4.187 2.418zm-.626 1.082l3.813 2.202v4.406l-7.66-4.422v-4.404zm8.912 2.202l3.813-2.202 3.847 2.218v4.404l-7.66 4.422z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>RESTful APIs / GraphQL</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 72%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #21759B, #464646);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M21.469 6.825c.84 4.28-1.86 8.19-6.04 8.19-.39 0-.78-.03-1.16-.09-.38-.06-.76-.15-1.13-.27-.37-.12-.73-.27-1.08-.45-.35-.18-.68-.39-1-.63-.32-.24-.62-.51-.9-.8-.28-.29-.54-.61-.77-.95-.23-.34-.44-.7-.62-1.08-.18-.38-.33-.78-.45-1.19-.12-.41-.21-.84-.27-1.27-.06-.43-.09-.87-.09-1.32 0-.45.03-.89.09-1.32.06-.43.15-.86.27-1.27.12-.41.27-.81.45-1.19.18-.38.39-.74.62-1.08.23-.34.49-.66.77-.95.28-.29.58-.56.9-.8.32-.24.65-.45 1-.63.35-.18.71-.33 1.08-.45.37-.12.75-.21 1.13-.27.38-.06.77-.09 1.16-.09 4.18 0 6.88 3.91 6.04 8.19zm-6.04-5.69c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-12.43 5.69c.84 4.28-1.86 8.19-6.04 8.19 4.18 0 6.88-3.91 6.04-8.19-.84-4.28 1.86-8.19 6.04-8.19-4.18 0-6.88 3.91-6.04 8.19z"/></svg></div>
+                <div style="flex: 1;">
+                  <strong>WordPress / CMS Development</strong>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 65%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Admin Panels & Business Solutions -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #9B59B6, #8E44AD);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></div>
+            <div>
+              <div class="category-title">Admin Panels & Business Solutions</div>
+              <div class="category-subtitle">Production-ready SaaS platforms, admin panels & data-driven dashboards</div>
+            </div>
+          </div>
+          
+          <!-- Core Specialization Banner -->
+          <div style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); color: white; padding: 1rem 1.5rem; border-radius: var(--radius-lg); margin-bottom: 1.5rem;">
+            <p style="margin: 0; font-weight: 500;"><strong>Core Specialization:</strong> I build full-stack SaaS platforms, business systems, and admin panels designed for real-world production use — not just websites or prototypes. Using <strong>Next.js, React, TypeScript & Firebase</strong>.</p>
+          </div>
+
+          <!-- Systems I Build -->
+          <h4 style="color: var(--color-primary-light); margin-bottom: 1rem;">Systems I Build</h4>
+          <div class="flex gap-2" style="flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <span class="badge" style="background: var(--color-primary); color: #fff;">Admin Panels</span>
+            <span class="badge" style="background: var(--color-primary); color: #fff;">Business Dashboards</span>
+            <span class="badge" style="background: var(--color-primary); color: #fff;">Financial & Reporting Systems</span>
+            <span class="badge" style="background: var(--color-primary); color: #fff;">User & Staff Management</span>
+            <span class="badge" style="background: var(--color-primary); color: #fff;">Multi-service Platforms</span>
+            <span class="badge" style="background: var(--color-primary); color: #fff;">SaaS Web Applications</span>
+            <span class="badge" style="background: var(--color-primary); color: #fff;">Backend for Mobile Apps</span>
+            <span class="badge" style="background: var(--color-primary); color: #fff;">Web-based Control Panels</span>
+          </div>
+
+          <!-- Features I Implement -->
+          <h4 style="color: var(--color-primary-light); margin-bottom: 1rem;">⚙️ Features I Commonly Implement</h4>
+          <div class="flex gap-2" style="flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <span class="badge">User Authentication & Login</span>
+            <span class="badge">Admin, Staff & Customer Roles</span>
+            <span class="badge">Real-time Dashboards</span>
+            <span class="badge">Data Tables & Reports</span>
+            <span class="badge">Business Analytics</span>
+            <span class="badge">Form Systems</span>
+            <span class="badge">Booking & Workflows</span>
+            <span class="badge">Content & Data Management</span>
+            <span class="badge">File Uploads (Firebase Storage)</span>
+            <span class="badge">API Integrations</span>
+          </div>
+
+          <h4 style="color: var(--color-primary-light); margin-bottom: 1rem;">Technical Skills</h4>
+          
+          <div class="skills-grid">
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #6366F1, #8B5CF6);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></div>
+                <div style="flex: 1;"><strong>Custom Dashboard Development</strong><div class="skill-level"><div class="skill-level-fill" style="width: 92%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+                <div style="flex: 1;"><strong>User Management Systems</strong><div class="skill-level"><div class="skill-level-fill" style="width: 88%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #10B981, #059669);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M20 2H4c-1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-1-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4h16v3z"/></svg></div>
+                <div style="flex: 1;"><strong>Inventory & Order Management</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></div>
+                <div style="flex: 1;"><strong>Analytics & Reporting Dashboards</strong><div class="skill-level"><div class="skill-level-fill" style="width: 87%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+                <div style="flex: 1;"><strong>Role-Based Access Control (RBAC)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- DevOps & Cloud -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #1ABC9C, #16A085);">☁️</div>
+            <div>
+              <div class="category-title">DevOps & Cloud Platforms</div>
+              <div class="category-subtitle">Version control, CI/CD, cloud-based hosting & production-ready builds</div>
+            </div>
+          </div>
+          
+          <div class="skills-grid">
+            <div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #24292E, #333);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>GitHub & Git (Complete Workflow)</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Expert</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 94%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #2088FF, #0366D6);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.5 5.5l7 4.5-7 4.5v-9zm-1 0v9l-7-4.5 7-4.5z"/></svg></div>
+                <div style="flex: 1;"><strong>GitHub Actions (CI/CD)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #000, #333);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg></div>
+                <div style="flex: 1;"><strong>Vercel (Deployment)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 88%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #3ECF8E, #2DD4BF);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.203 12.424l-.401.562a1.04 1.04 0 0 0 .836 1.659H12v8.959a.396.396 0 0 0 .716.233l9.081-12.261.401-.562a1.04 1.04 0 0 0-.836-1.66z"/></svg></div>
+                <div style="flex: 1;"><strong>Supabase (BaaS)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #FF6C2C, #EE5A24);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6s-4.298 9.6-9.6 9.6S2.4 17.302 2.4 12 6.698 2.4 12 2.4zm0 1.2c-4.638 0-8.4 3.762-8.4 8.4s3.762 8.4 8.4 8.4 8.4-3.762 8.4-8.4-3.762-8.4-8.4-8.4zm0 2.4a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>cPanel / hPanel (Hosting)</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Expert</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 92%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #24292E, #333);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div>
+                <div style="flex: 1;"><strong>GitHub Pages & Repos Management</strong><div class="skill-level"><div class="skill-level-fill" style="width: 93%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #F05032, #DE4C36);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg></div>
+                <div style="flex: 1;"><strong>Git Branching & Pull Requests</strong><div class="skill-level"><div class="skill-level-fill" style="width: 90%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #2496ED, #0DB7ED);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H.172a.185.185 0 00-.186.186v1.887c0 .102.084.185.186.185m21.784 2.18c-1.921 0-3.477 1.556-3.477 3.477s1.556 3.477 3.477 3.477 3.477-1.556 3.477-3.477-1.556-3.477-3.477-3.477m0 5.93c-1.354 0-2.453-1.099-2.453-2.453s1.099-2.453 2.453-2.453 2.453 1.099 2.453 2.453-1.099 2.453-2.453 2.453"/></svg></div>
+                <div style="flex: 1;"><strong>Docker (Basics)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 70%;"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- SECTION 3: AI & INTELLIGENT TOOLS -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        
+        <div id="ai-tools" class="section-divider reveal"><span>AI & Intelligent Tools</span></div>
+
+        <!-- AI & Machine Learning -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1-2.73 2.71-2.73 7.08 0 9.79s7.15 2.71 9.88 0c1.36-1.35 2.04-2.92 2.04-4.9h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58s9.14-3.47 12.65 0L21 3v7.12z"/></svg></div>
+            <div>
+              <div class="category-title">Artificial Intelligence & Machine Learning</div>
+              <div class="category-subtitle">LLMs, prompt engineering, and AI-powered solutions</div>
+            </div>
+          </div>
+          
+          <div class="skills-grid">
+            <div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #10A37F, #1A7F64);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>LLMs (GPT, Claude, Gemini)</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Expert</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 94%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>Prompt Engineering & Optimization</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Expert</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 92%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #FF6B6B, #EE5A5A);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                <div style="flex: 1;"><strong>AI Image Gen (DALL-E, Midjourney, SD)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #000, #333);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 0L1.75 6v12L12 24l10.25-6V6zm0 3.311l6.912 4.037-2.838 1.658L12 6.65l-4.074 2.356-2.838-1.658zm-7.25 4.694l3.088 1.803v4.384l4.162 2.41v3.587L4.75 16.002zm14.5 0v8.187L12 20.189v-3.587l4.162-2.41V9.808z"/></svg></div>
+                <div style="flex: 1;"><strong>AI Dev Tools (Copilot, Cursor)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 93%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #FF6F00, #FF8F00);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H9.789l-9-9C.303 14.5 0 13.795 0 13.105c0-.319.18-.818.316-1.105l3.789-7.895zm.679.679v11.787c.002.543.021 1.024.498 1.508L10.204 23h8.533v-4.263h4.263V9.789L14.017 1.106c-.147-.109-.451-.316-.765-.316-.258 0-.474.074-.702.21L4.784 4.784z"/></svg></div>
+                <div style="flex: 1;"><strong>Machine Learning Concepts</strong><div class="skill-level"><div class="skill-level-fill" style="width: 80%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5z"/></svg></div>
+                <div style="flex: 1;"><strong>AI Automation & Workflows</strong><div class="skill-level"><div class="skill-level-fill" style="width: 87%;"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI-Powered IDEs -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #EC4899, #DB2777);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg></div>
+            <div>
+              <div class="category-title">AI-Powered Development Environments</div>
+              <div class="category-subtitle">Next-generation IDEs and intelligent coding assistants</div>
+            </div>
+          </div>
+          
+          <h4 style="color: var(--color-primary-light); margin-bottom: 1rem;">AI-First IDEs</h4>
+          <div class="skills-grid" style="margin-bottom: 1.5rem;">
+            <div>
+              <div class="skill-item highlight-card" style="border-color: var(--color-primary);">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #7C3AED, #A855F7);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>Cursor (AI-First Editor)</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Primary</span>
+                  </div>
+                  <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin: 0.3rem 0;">AI pair programming & intelligent refactoring</p>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 96%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item highlight-card" style="border-color: var(--color-secondary);">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #FF6B35, #F7931E);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>Kiro (AWS AI IDE)</strong>
+                    <span class="badge badge-primary" style="font-size: 0.7rem;">Expert</span>
+                  </div>
+                  <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin: 0.3rem 0;">Spec-driven & agentic workflows</p>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 94%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #007ACC, #0098FF);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg></div>
+                <div style="flex: 1;"><strong>VS Code (with AI Extensions)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 95%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #00D4AA, #00B894);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                <div style="flex: 1;"><strong>Windsurf (Codeium)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 88%;"></div></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #6366F1, #8B5CF6);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                <div style="flex: 1;"><strong>Trae (ByteDance AI IDE)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #4285F4, #34A853);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></div>
+                <div style="flex: 1;"><strong>Google IDX / Antigravity</strong><div class="skill-level"><div class="skill-level-fill" style="width: 83%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #01A4FF, #0085FF);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-10-8c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 14c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z"/></svg></div>
+                <div style="flex: 1;"><strong>Warp (AI Terminal)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 87%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #15C39A, #0EA5E9);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                <div style="flex: 1;"><strong>Qodo / Codium (AI Testing)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 82%;"></div></div></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="divider-gradient" style="margin: 1.5rem 0;"></div>
+          
+          <h4 style="color: var(--color-secondary-light); margin-bottom: 1rem;">⌨️ AI Coding CLI Tools</h4>
+          <div class="skills-grid">
+            <div>
+              <div class="skill-item highlight-card" style="border-color: var(--color-accent);">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #D97706, #F59E0B);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>Claude Code (Anthropic CLI)</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Expert</span>
+                  </div>
+                  <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin: 0.3rem 0;">Terminal-based AI assistant</p>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 93%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #10B981, #059669);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073z"/></svg></div>
+                <div style="flex: 1;"><strong>OpenAI Codex CLI</strong><div class="skill-level"><div class="skill-level-fill" style="width: 88%;"></div></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #6366F1, #4F46E5);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></div>
+                <div style="flex: 1;"><strong>OpenCode (Open Source)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #22C55E, #16A34A);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div>
+                <div style="flex: 1;"><strong>Aider (Git-Integrated AI)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 84%;"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- SECTION 4: SECURITY & NETWORKING -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        
+        <div id="security" class="section-divider reveal"><span>Security & Infrastructure</span></div>
+
+        <!-- Cybersecurity & Network -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+            <div>
+              <div class="category-title">Cybersecurity & Network Infrastructure</div>
+              <div class="category-subtitle">Security, networking, and system administration</div>
+            </div>
+          </div>
+          
+          <div class="skills-grid">
+            <div>
+              <h4 style="color: var(--color-primary-light); margin-bottom: 1rem; font-size: 0.9rem;">Security</h4>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #EF4444, #B91C1C);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>CEH (Ethical Hacking)</strong>
+                    <span class="badge badge-primary" style="font-size: 0.7rem;">Certified</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 82%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #1679A7, #2196F3);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                <div style="flex: 1;"><strong>Wireshark (Packet Analysis)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #FF5722, #E64A19);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 12.9l-2.13 4.65-4.36.64 3.16 3.07-.75 4.34L12 23.4l3.91 2.2-.75-4.34 3.16-3.07-4.36-.64L12 12.9zM12 2C6.48 2 2 6.48 2 12c0 1.33.26 2.61.74 3.77L12 8l9.26 7.77c.48-1.16.74-2.44.74-3.77 0-5.52-4.48-10-10-10z"/></svg></div>
+                <div style="flex: 1;"><strong>Firewall & VPN Configuration</strong><div class="skill-level"><div class="skill-level-fill" style="width: 83%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #557C94, #2B5F83);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12.504 0c-.155 0-.311.001-.465.003-.658.014-1.317.07-1.97.168-.654.099-1.3.24-1.932.422-.633.182-1.25.404-1.848.665-.598.261-1.175.56-1.727.895-.552.335-1.077.706-1.571 1.11-.494.404-.956.84-1.383 1.305-.427.465-.818.958-1.17 1.476-.352.518-.664 1.06-.934 1.621-.27.561-.497 1.14-.68 1.733-.183.593-.322 1.199-.416 1.814-.094.615-.143 1.238-.147 1.862-.004.624.04 1.247.132 1.862.092.615.229 1.221.41 1.814.181.593.406 1.172.674 1.733.268.561.578 1.103.928 1.621.35.518.739 1.011 1.164 1.476.425.465.885.901 1.377 1.305.492.404 1.015.775 1.565 1.11.55.335 1.125.634 1.721.895.596.261 1.211.483 1.842.665.631.182 1.275.323 1.927.422.652.099 1.31.155 1.966.169.154.002.309.003.463.003.155 0 .311-.001.465-.003.658-.014 1.317-.07 1.97-.168.654-.099 1.3-.24 1.932-.422.633-.182 1.25-.404 1.848-.665.598-.261 1.175-.56 1.727-.895.552-.335 1.077-.706 1.571-1.11.494-.404.956-.84 1.383-1.305.427-.465.818-.958 1.17-1.476.352-.518.664-1.06.934-1.621.27-.561.497-1.14.68-1.733.183-.593.322-1.199.416-1.814.094-.615.143-1.238.147-1.862.004-.624-.04-1.247-.132-1.862-.092-.615-.229-1.221-.41-1.814-.181-.593-.406-1.172-.674-1.733-.268-.561-.578-1.103-.928-1.621-.35-.518-.739-1.011-1.164-1.476-.425-.465-.885-.901-1.377-1.305-.492-.404-1.015-.775-1.565-1.11-.55-.335-1.125-.634-1.721-.895-.596-.261-1.211-.483-1.842-.665-.631-.182-1.275-.323-1.927-.422-.652-.099-1.31-.155-1.966-.169-.154-.002-.309-.003-.463-.003z"/></svg></div>
+                <div style="flex: 1;"><strong>Kali Linux (Pen Testing)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 78%;"></div></div></div>
+              </div>
+            </div>
+            <div>
+              <h4 style="color: var(--color-secondary-light); margin-bottom: 1rem; font-size: 0.9rem;">Networking</h4>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>CompTIA Network+ Concepts</strong>
+                    <span class="badge badge-primary" style="font-size: 0.7rem;">Advanced</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #293239, #4A5568);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
+                <div style="flex: 1;"><strong>Router Config (MikroTik, Cisco)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 88%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #049FD9, #00BCEB);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                <div style="flex: 1;"><strong>Switch & VLAN Management</strong><div class="skill-level"><div class="skill-level-fill" style="width: 82%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #4CAF50, #8BC34A);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2zm0-2h2V7h-2z"/></svg></div>
+                <div style="flex: 1;"><strong>Wireless Network Security</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- SECTION 5: BUSINESS & FINANCE -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        
+        <div id="business" class="section-divider reveal"><span>Business & Finance</span></div>
+
+        <!-- Digital Financial Markets -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);"></div>
+            <div>
+              <div class="category-title">Digital Financial Markets</div>
+              <div class="category-subtitle">Cryptocurrency, blockchain, and trading platforms</div>
+            </div>
+          </div>
+          
+          <div class="skills-grid">
+            <div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #F7931A, #FF9500);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.546zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.7-.168-1.053-.25l.53-2.12-1.32-.33-.54 2.153c-.285-.065-.565-.13-.84-.2l-1.815-.45-.35 1.407s.975.225.955.238c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.254 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.52 2.75 2.084v.006z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>Crypto Trading & Analysis</strong>
+                    <span class="badge badge-primary" style="font-size: 0.7rem;">Advanced</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 72%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #627EEA, #8A9EFF);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M11.944 17.97L4.58 13.62 11.943 24l7.37-10.38-7.372 4.35h.003zM12.056 0L4.69 12.223l7.365 4.354 7.365-4.35L12.056 0z"/></svg></div>
+                <div style="flex: 1;"><strong>Blockchain & DeFi</strong><div class="skill-level"><div class="skill-level-fill" style="width: 65%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #131722, #2962FF);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M3 17h18v2H3v-2zm0-7h18v5H3v-5zm0-4h18v2H3V6z"/></svg></div>
+                <div style="flex: 1;"><strong>Technical Analysis & Charts</strong><div class="skill-level"><div class="skill-level-fill" style="width: 68%;"></div></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #F0B90B, #FCD535);"><svg viewBox="0 0 24 24" width="28" height="28" fill="#1E2026"><path d="M16.624 13.9202l2.7175 2.7154-7.353 7.353-7.353-7.352 2.7175-2.7164 4.6355 4.6595 4.6356-4.6595zm4.6366-4.6366L24 12l-2.7154 2.7164L18.5765 12l2.6841-2.7164zm-9.272-9.2722l7.353 7.353-2.7174 2.7154-4.6356-4.6595-4.6355 4.6595-2.7175-2.7154 7.353-7.353zM5.4234 12l-2.7164 2.7164L0 12l2.7164-2.7164L5.4234 12z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>Exchanges (Binance, Bybit, KuCoin)</strong>
+                    <span class="badge badge-primary" style="font-size: 0.7rem;">Advanced</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 75%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #00C805, #00A804);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg></div>
+                <div style="flex: 1;"><strong>Stock Market & Forex</strong><div class="skill-level"><div class="skill-level-fill" style="width: 55%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #0052FF, #0066FF);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.8c3.975 0 7.2 3.225 7.2 7.2s-3.225 7.2-7.2 7.2-7.2-3.225-7.2-7.2 3.225-7.2 7.2-7.2zm0 2.4c-2.65 0-4.8 2.15-4.8 4.8s2.15 4.8 4.8 4.8 4.8-2.15 4.8-4.8-2.15-4.8-4.8-4.8z"/></svg></div>
+                <div style="flex: 1;"><strong>Wallet Security & Cold Storage</strong><div class="skill-level"><div class="skill-level-fill" style="width: 70%;"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Financial Management & Procurement -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #10B981, #059669);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+            <div>
+              <div class="category-title">Financial Management & Procurement</div>
+              <div class="category-subtitle">Accounting software, ERP systems, and UN/NGO documentation</div>
+            </div>
+          </div>
+          
+          <div class="skills-grid">
+            <div>
+              <h4 style="color: var(--color-primary-light); margin-bottom: 1rem; font-size: 0.9rem;">Accounting Software</h4>
+              <div class="skill-item highlight-card" style="border-color: var(--color-success);">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #2CA01C, #4CAF50);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12.006 0c-1.567 0-3.133.592-4.33 1.776L.59 8.862c-2.394 2.37-2.394 6.21 0 8.58l7.086 7.086c2.37 2.394 6.21 2.394 8.58 0l7.086-7.086c2.394-2.37 2.394-6.21 0-8.58L16.256 1.776C15.059.592 13.493 0 11.926 0h.08zm-.08 4.8c.784 0 1.567.296 2.165.888l4.147 4.147c1.197 1.185 1.197 3.105 0 4.29l-4.147 4.147c-1.185 1.197-3.105 1.197-4.29 0l-4.147-4.147c-1.197-1.185-1.197-3.105 0-4.29L9.8 5.688c.598-.592 1.381-.888 2.165-.888h-.04z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>QuickBooks (Desktop & Online)</strong>
+                    <span class="badge badge-primary" style="font-size: 0.7rem;">Advanced</span>
+                  </div>
+                  <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin: 0.3rem 0;">Full accounting cycle & reporting</p>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 75%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #714B67, #9C27B0);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm0 4.8c3.975 0 7.2 3.225 7.2 7.2s-3.225 7.2-7.2 7.2-7.2-3.225-7.2-7.2 3.225-7.2 7.2-7.2z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>Odoo ERP (Finance Modules)</strong>
+                    <span class="badge" style="font-size: 0.7rem;">Intermediate</span>
+                  </div>
+                  <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin: 0.3rem 0;">Integrated business management</p>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 65%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #217346, #33C481);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7V18H1q-.41 0-.7-.3-.3-.29-.3-.7V7q0-.41.3-.7Q.58 6 1 6h5V2.5q0-.41.3-.7.29-.3.7-.3zM6 13.28l1.42 2.66h2.14l-2.38-3.87 2.34-3.8H7.46l-1.3 2.4-.05.08-.04.09-.64-1.28-.66-1.29H2.59l2.27 3.82-2.48 3.85h2.16zM14.25 21v-3H7.5v3zm0-4.5v-3.75H12v3.75zm0-5.25V7.5H12v3.75zm0-5.25V3H7.5v3zm8.25 15v-3h-6.75v3zm0-4.5v-3.75h-6.75v3.75zm0-5.25V7.5h-6.75v3.75zm0-5.25V3h-6.75v3z"/></svg></div>
+                <div style="flex: 1;"><strong>Excel Financial Modeling</strong><div class="skill-level"><div class="skill-level-fill" style="width: 78%;"></div></div></div>
+              </div>
+              </div>
+            <div>
+              <h4 style="color: var(--color-secondary-light); margin-bottom: 1rem; font-size: 0.9rem;">Procurement & Documentation</h4>
+              <div class="skill-item highlight-card">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #3B82F6, #1D4ED8);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>UN/NGO Procurement Standards</strong>
+                    <span class="badge badge-primary" style="font-size: 0.7rem;">Advanced</span>
+                  </div>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 78%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #6366F1, #8B5CF6);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div>
+                <div style="flex: 1;"><strong>RFQ/RFP Preparation</strong><div class="skill-level"><div class="skill-level-fill" style="width: 72%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #10B981, #059669);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></div>
+                <div style="flex: 1;"><strong>Budget Planning & Cost Analysis</strong><div class="skill-level"><div class="skill-level-fill" style="width: 70%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #009EDB, #0077B5);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+                <div style="flex: 1;"><strong>Audit Compliance (UNDP/UNICEF)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 72%;"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- SECTION 6: PRODUCTIVITY & DESIGN -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        
+        <div id="productivity" class="section-divider reveal"><span>Productivity & Design</span></div>
+
+        <!-- Microsoft Office -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #D24726, #EB3C00);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></div>
+            <div>
+              <div class="category-title">Microsoft Office & Productivity Suite</div>
+              <div class="category-subtitle">Expert-level proficiency in business applications</div>
+            </div>
+          </div>
+          
+          <div class="skills-grid">
+            <div>
+              <div class="skill-item highlight-card" style="border-color: #D24726;">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #D24726, #FF6B35);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M6 3v18h12V3H6zm10 16H8V5h8v14zM2 5h2v14H2V5zm18 0h2v14h-2V5z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>PowerPoint (Executive Presentations)</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Specialist</span>
+                  </div>
+                  <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin: 0.3rem 0;">Stunning animations, infographics & branding</p>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 98%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item highlight-card" style="border-color: #217346;">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #217346, #33C481);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7V18H1q-.41 0-.7-.3-.3-.29-.3-.7V7q0-.41.3-.7Q.58 6 1 6h5V2.5q0-.41.3-.7.29-.3.7-.3zM6 13.28l1.42 2.66h2.14l-2.38-3.87 2.34-3.8H7.46l-1.3 2.4-.05.08-.04.09-.64-1.28-.66-1.29H2.59l2.27 3.82-2.48 3.85h2.16zM14.25 21v-3H7.5v3zm0-4.5v-3.75H12v3.75zm0-5.25V7.5H12v3.75zm0-5.25V3H7.5v3zm8.25 15v-3h-6.75v3zm0-4.5v-3.75h-6.75v3.75zm0-5.25V7.5h-6.75v3.75zm0-5.25V3h-6.75v3z"/></svg></div>
+                <div style="flex: 1;">
+                  <div class="flex items-center justify-between">
+                    <strong>Excel (Advanced + VBA)</strong>
+                    <span class="badge badge-success" style="font-size: 0.7rem;">Expert</span>
+                  </div>
+                  <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin: 0.3rem 0;">Pivot tables, macros & dashboards</p>
+                  <div class="skill-level"><div class="skill-level-fill" style="width: 95%;"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #2B579A, #4A90D9);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M23.004 1.5q.41 0 .703.293t.293.703v19.008q0 .41-.293.703t-.703.293H6.996q-.41 0-.703-.293T6 21.504V18H.996q-.41 0-.703-.293T0 17.004V6.996q0-.41.293-.703T.996 6H6V2.496q0-.41.293-.703t.703-.293zM6.035 11.203l1.442-4.735h1.64l-2.325 6.066H5.57l-2.325-6.066h1.64zm15.469 9.801V3H7.5v3h5.076q.41 0 .703.293t.293.703v10.008q0 .41-.293.703t-.703.293H7.5v3z"/></svg></div>
+                <div style="flex: 1;"><strong>Word (Professional Documents)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 96%;"></div></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #D83B01, #FF6B35);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M11.5 3v8.5H3V3h8.5zm0 18H3v-8.5h8.5V21zm1-18H21v8.5h-8.5V3zm8.5 9.5V21h-8.5v-8.5H21z"/></svg></div>
+                <div style="flex: 1;"><strong>Microsoft 365 Suite</strong><div class="skill-level"><div class="skill-level-fill" style="width: 97%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #F2C811, #E8B909);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg></div>
+                <div style="flex: 1;"><strong>Power BI (Data Visualization)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 80%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #0078D4, #00BCF2);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg></div>
+                <div style="flex: 1;"><strong>Outlook & Teams</strong><div class="skill-level"><div class="skill-level-fill" style="width: 88%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #038387, #00B294);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg></div>
+                <div style="flex: 1;"><strong>SharePoint & OneDrive</strong><div class="skill-level"><div class="skill-level-fill" style="width: 85%;"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design & Multimedia -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #EC4899, #BE185D);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
+            <div>
+              <div class="category-title">Design & Multimedia</div>
+              <div class="category-subtitle">Graphics, video editing, and visual content creation</div>
+            </div>
+          </div>
+          
+          <div class="skills-grid">
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #00C4CC, #7B2FF7);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M8.5 8.64L12 6.32l3.5 2.32v4.64L12 15.6l-3.5-2.32V8.64zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></div>
+                <div style="flex: 1;"><strong>Canva (Design)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 88%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #6DB33F, #8BC34A);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                <div style="flex: 1;"><strong>CorelDRAW</strong><div class="skill-level"><div class="skill-level-fill" style="width: 72%;"></div></div></div>
+              </div>
+            </div>
+            <div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #6DB33F, #8BC34A);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg></div>
+                <div style="flex: 1;"><strong>Camtasia (Video)</strong><div class="skill-level"><div class="skill-level-fill" style="width: 78%;"></div></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon" style="background: linear-gradient(135deg, #31A8FF, #001E36);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M9.85 8.42c-.37-.15-.77-.21-1.18-.2-.26 0-.49.02-.68.06-.19.04-.37.09-.53.15-.16.06-.31.13-.44.21-.13.08-.25.16-.36.24l.01 1.03c.26-.21.54-.39.84-.52.3-.13.63-.2.98-.2.21 0 .4.02.57.07.17.05.31.12.43.22.12.1.21.22.27.37.06.15.09.32.09.52 0 .27-.05.5-.14.69-.09.19-.22.36-.38.51-.16.15-.35.28-.56.4-.21.12-.44.23-.68.34-.31.14-.6.29-.86.45-.26.16-.49.35-.68.56-.19.21-.34.46-.45.74-.11.28-.16.61-.16.99 0 .38.07.71.2 1 .13.29.32.53.55.73.23.2.51.35.83.45.32.1.67.15 1.05.15.22 0 .43-.02.64-.05.21-.03.41-.08.6-.14.19-.06.37-.13.54-.21.17-.08.33-.17.48-.27l-.01-1.04c-.3.24-.61.43-.93.56-.32.13-.67.2-1.04.2-.2 0-.38-.02-.54-.07-.16-.05-.3-.12-.41-.21-.11-.09-.2-.21-.26-.35-.06-.14-.09-.3-.09-.48 0-.23.05-.43.14-.6.09-.17.22-.32.38-.46.16-.14.35-.26.56-.38.21-.12.44-.24.68-.36.31-.15.6-.31.86-.48.26-.17.49-.37.68-.59.19-.22.34-.48.45-.77.11-.29.16-.63.16-1.02 0-.41-.07-.77-.21-1.08-.14-.31-.33-.57-.58-.78-.25-.21-.54-.37-.88-.48-.34-.11-.71-.16-1.11-.16-.26 0-.51.02-.75.06-.24.04-.47.1-.69.17-.22.07-.43.16-.63.26-.2.1-.38.21-.55.33l.01 1.02c.28-.22.58-.4.9-.54zm4.43 5.29c0 .19.01.38.03.55.02.17.06.33.12.47.06.14.14.26.25.35.11.09.25.13.43.13.11 0 .21-.01.29-.04.08-.03.16-.07.23-.12l-.01-.96c-.05.03-.1.05-.16.07-.06.02-.12.03-.19.03-.1 0-.17-.03-.22-.09-.05-.06-.08-.16-.08-.31v-2.59h.66v-.88h-.66v-1.3l-1.09.33v.97h-.49v.88h.49v2.51h.4zm3.73-2.51h-.95l-1.4 4.55h1.07l.29-1.03h1.47l.29 1.03h1.1l-1.4-4.55h-.47zm-.78 2.72l.51-1.83.51 1.83h-1.02z"/></svg></div>
+                <div style="flex: 1;"><strong>Adobe Photoshop</strong><div class="skill-level"><div class="skill-level-fill" style="width: 68%;"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- SECTION 7: SYSTEMS & LANGUAGES -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        
+        <div id="systems" class="section-divider reveal"><span>Systems & Languages</span></div>
+
+        <!-- Operating Systems -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #0078D4, #00BCF2);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg></div>
+            <div>
+              <div class="category-title">Operating Systems</div>
+              <div class="category-subtitle">System administration and platform expertise</div>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-4" style="gap: 1rem;">
+            <div class="glass-card" style="text-align: center; padding: 1.5rem;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="48" height="48" fill="var(--color-primary)"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg></div>
+              <strong style="font-size: 0.9rem;">Windows</strong>
+              <div class="skill-level" style="margin-top: 0.75rem;"><div class="skill-level-fill" style="width: 95%;"></div></div>
+            </div>
+            <div class="glass-card" style="text-align: center; padding: 1.5rem;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="48" height="48" fill="var(--color-primary)"><path d="M12.504 0c-.155 0-.311.001-.465.003-.658.014-1.317.07-1.97.168-.654.099-1.3.24-1.932.422-.633.182-1.25.404-1.848.665-.598.261-1.175.56-1.727.895-.552.335-1.077.706-1.571 1.11-.494.404-.956.84-1.383 1.305-.427.465-.818.958-1.17 1.476-.352.518-.664 1.06-.934 1.621-.27.561-.497 1.14-.68 1.733-.183.593-.322 1.199-.416 1.814-.094.615-.143 1.238-.147 1.862-.004.624.04 1.247.132 1.862.092.615.229 1.221.41 1.814.181.593.406 1.172.674 1.733.268.561.578 1.103.928 1.621.35.518.739 1.011 1.164 1.476.425.465.885.901 1.377 1.305.492.404 1.015.775 1.565 1.11.55.335 1.125.634 1.721.895.596.261 1.211.483 1.842.665.631.182 1.275.323 1.927.422.652.099 1.31.155 1.966.169.154.002.309.003.463.003.155 0 .311-.001.465-.003.658-.014 1.317-.07 1.97-.168.654-.099 1.3-.24 1.932-.422.633-.182 1.25-.404 1.848-.665.598-.261 1.175-.56 1.727-.895.552-.335 1.077-.706 1.571-1.11.494-.404.956-.84 1.383-1.305.427-.465.818-.958 1.17-1.476.352-.518.664-1.06.934-1.621.27-.561.497-1.14.68-1.733.183-.593.322-1.199.416-1.814.094-.615.143-1.238.147-1.862.004-.624-.04-1.247-.132-1.862-.092-.615-.229-1.221-.41-1.814-.181-.593-.406-1.172-.674-1.733-.268-.561-.578-1.103-.928-1.621-.35-.518-.739-1.011-1.164-1.476-.425-.465-.885-.901-1.377-1.305-.492-.404-1.015-.775-1.565-1.11-.55-.335-1.125-.634-1.721-.895-.596-.261-1.211-.483-1.842-.665-.631-.182-1.275-.323-1.927-.422-.652-.099-1.31-.155-1.966-.169-.154-.002-.309-.003-.463-.003zm-.504 3.249c.156 0 .312.002.467.005.31.006.62.024.928.054.308.03.614.072.916.126.302.054.6.12.893.198.293.078.581.168.862.27.281.102.555.216.821.341.266.125.524.262.773.41.249.148.489.307.719.477.23.17.45.351.659.542.209.191.407.392.593.603.186.211.36.432.521.661.161.229.309.467.443.712.134.245.254.497.36.755.106.258.198.522.275.79.077.268.14.541.188.817.048.276.081.555.099.836.018.281.021.563.009.845-.012.282-.039.563-.081.842-.042.279-.099.555-.171.828-.072.273-.159.542-.26.806-.101.264-.217.523-.347.775-.13.252-.274.498-.432.736-.158.238-.329.468-.513.689-.184.221-.38.433-.588.635-.208.202-.428.394-.658.575-.23.181-.471.351-.721.51-.25.159-.509.306-.776.441-.267.135-.542.258-.823.368-.281.11-.569.207-.862.291-.293.084-.591.155-.893.213-.302.058-.608.103-.916.135-.308.032-.618.051-.928.057-.155.003-.311.005-.467.005-.156 0-.312-.002-.467-.005-.31-.006-.62-.025-.928-.057-.308-.032-.614-.077-.916-.135-.302-.058-.6-.129-.893-.213-.293-.084-.581-.181-.862-.291-.281-.11-.556-.233-.823-.368-.267-.135-.526-.282-.776-.441-.25-.159-.491-.329-.721-.51-.23-.181-.45-.373-.658-.575-.208-.202-.404-.414-.588-.635-.184-.221-.355-.451-.513-.689-.158-.238-.302-.484-.432-.736-.13-.252-.246-.511-.347-.775-.101-.264-.188-.533-.26-.806-.072-.273-.129-.549-.171-.828-.042-.279-.069-.56-.081-.842-.012-.282-.009-.564.009-.845.018-.281.051-.56.099-.836.048-.276.111-.549.188-.817.077-.268.169-.532.275-.79.106-.258.226-.51.36-.755.134-.245.282-.483.443-.712.161-.229.335-.45.521-.661.186-.211.384-.412.593-.603.209-.191.429-.372.659-.542.23-.17.47-.329.719-.477.249-.148.507-.285.773-.41.266-.125.54-.239.821-.341.281-.102.569-.192.862-.27.293-.078.591-.144.893-.198.302-.054.608-.096.916-.126.308-.03.618-.048.928-.054.155-.003.311-.005.467-.005z"/></svg></div>
+              <strong style="font-size: 0.9rem;">Ubuntu/Debian</strong>
+              <div class="skill-level" style="margin-top: 0.75rem;"><div class="skill-level-fill" style="width: 82%;"></div></div>
+            </div>
+            <div class="glass-card" style="text-align: center; padding: 1.5rem;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="48" height="48" fill="var(--color-primary)"><path d="M12.014 0C5.386 0 0 5.373 0 12.001c0 5.086 3.158 9.428 7.621 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.014 24c6.628 0 12-5.373 12-12.001C24.014 5.373 18.642 0 12.014 0z"/></svg></div>
+              <strong style="font-size: 0.9rem;">Kali Linux</strong>
+              <div class="skill-level" style="margin-top: 0.75rem;"><div class="skill-level-fill" style="width: 78%;"></div></div>
+            </div>
+            <div class="glass-card" style="text-align: center; padding: 1.5rem;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="48" height="48" fill="var(--color-primary)"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
+              <strong style="font-size: 0.9rem;">macOS</strong>
+              <div class="skill-level" style="margin-top: 0.75rem;"><div class="skill-level-fill" style="width: 70%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="gradient-card reveal skill-card" style="margin-bottom: 2rem;">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #6366F1, #4F46E5);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+            <div>
+              <div class="category-title">Languages</div>
+              <div class="category-subtitle">Communication skills across multiple languages</div>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-3" style="gap: 1.5rem;">
+            <div class="glass-card" style="padding: 2rem; text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: 0.75rem;">🇦🇫</div>
+              <h3 style="margin-bottom: 0.5rem;">Dari (دری)</h3>
+              <span class="badge badge-success">Native</span>
+              <div class="skill-level" style="margin-top: 1rem;"><div class="skill-level-fill" style="width: 100%;"></div></div>
+            </div>
+            <div class="glass-card" style="padding: 2rem; text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: 0.75rem;">🇬🇧</div>
+              <h3 style="margin-bottom: 0.5rem;">English</h3>
+              <span class="badge badge-primary">Good</span>
+              <div class="skill-level" style="margin-top: 1rem;"><div class="skill-level-fill" style="width: 75%;"></div></div>
+            </div>
+            <div class="glass-card" style="padding: 2rem; text-align: center;">
+              <div style="font-size: 3rem; margin-bottom: 0.75rem;">🇦🇫</div>
+              <h3 style="margin-bottom: 0.5rem;">Pashto (پښتو)</h3>
+              <span class="badge">Conversational</span>
+              <div class="skill-level" style="margin-top: 1rem;"><div class="skill-level-fill" style="width: 50%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Skills -->
+        <div class="gradient-card reveal skill-card">
+          <div class="category-header">
+            <div class="category-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);"><svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg></div>
+            <div>
+              <div class="category-title">Professional & Soft Skills</div>
+              <div class="category-subtitle">Leadership, communication, and interpersonal abilities</div>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-3" style="gap: 1rem;">
+            <div class="glass-card hover-lift" style="text-align: center; padding: 1.5rem;">
+              
+              <strong>Team Leadership</strong>
+              <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin-top: 0.5rem;">Faculty & project team management</p>
+            </div>
+            <div class="glass-card hover-lift" style="text-align: center; padding: 1.5rem;">
+              
+              <strong>Project Management</strong>
+              <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin-top: 0.5rem;">UN/NGO project coordination</p>
+            </div>
+            <div class="glass-card hover-lift" style="text-align: center; padding: 1.5rem;">
+              
+              <strong>Communication</strong>
+              <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin-top: 0.5rem;">Written & verbal excellence</p>
+            </div>
+            <div class="glass-card hover-lift" style="text-align: center; padding: 1.5rem;">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-primary);">◆</div>
+              <strong>Teaching</strong>
+              <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin-top: 0.5rem;">7+ years university instruction</p>
+            </div>
+            <div class="glass-card hover-lift" style="text-align: center; padding: 1.5rem;">
+              
+              <strong>Problem Solving</strong>
+              <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin-top: 0.5rem;">Analytical & creative solutions</p>
+            </div>
+            <div class="glass-card hover-lift" style="text-align: center; padding: 1.5rem;">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-primary);">◆</div>
+              <strong>Data Analysis</strong>
+              <p style="color: var(--color-text-secondary); font-size: 0.8rem; margin-top: 0.5rem;">Reporting & insights extraction</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="glass-card reveal" style="text-align: center; padding: 3rem; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: -50%; left: -10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(40px);"></div>
+          <div style="position: absolute; bottom: -50%; right: -10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(40px);"></div>
+          
+          <div style="position: relative; z-index: 1;">
+            <h2 style="margin-bottom: 1rem;">Let's Build Something Amazing</h2>
+            <p style="color: var(--color-text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+              Looking for an engineer with diverse technical skills and proven project experience? Let's discuss how I can contribute to your team.
+            </p>
+            <div class="flex gap-4" style="justify-content: center; flex-wrap: wrap;">
+              <a href="contact.html" class="btn btn-primary btn-lg">Contact Me</a>
+              <a href="resume.html" class="btn btn-secondary btn-lg">View Resume</a>
+              <a href="projects.html" class="btn btn-ghost btn-lg">View Projects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Mohammad Ali Yusefi</h4>
+          <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">Full-Stack Business System Engineer building SaaS platforms, admin panels & dashboards.</p>
+          <div class="social-links">
+            <a href="mailto:Ali.yusefi.ee@gmail.com" class="social-link" title="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+            <a href="https://www.linkedin.com/in/mohammad-ali-yusefi" class="social-link" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+            <a href="https://github.com/MAYusefi" class="social-link" target="_blank" rel="noopener noreferrer" title="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:Ali.yusefi.ee@gmail.com">Ali.yusefi.ee@gmail.com</a></li>
+            <li>+93 749 030 730</li>
+            <li>Street 4, Taimani Project, District 4, Kabul, Afghanistan</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mohammad Ali Yusefi — Full-Stack Business System Engineer. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <link rel="manifest" href="manifest.json">
+  <script src="js/main.js"></script>
+  <script>
+    // Smooth scroll for skills navigation
+    document.querySelectorAll('.skills-nav-item').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const headerOffset = 100;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        }
+      });
+    });
+    if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js');});}
+  </script>
+</body>
+</html>

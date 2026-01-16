@@ -1,0 +1,274 @@
+/**
+ * Mobile Responsive Fixes
+ * Additional fixes for mobile display issues
+ */
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for inline styles that might cause overflow */
+@media (max-width: 768px) {
+  /* Force responsive behavior for all grids */
+  .grid[style*="grid-template-columns"],
+  div[style*="display: grid"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Fix flex items that don't wrap */
+  .flex,
+  div[style*="display: flex"] {
+    flex-wrap: wrap !important;
+  }
+  
+  /* Fix timeline on mobile */
+  .timeline {
+    padding-left: 1rem;
+  }
+  
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline::before {
+    left: 0;
+  }
+  
+  .timeline-item::before {
+    left: -1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Aggressive fixes for small screens */
+  [style*="gap: 3rem"],
+  [style*="gap: 2rem"] {
+    gap: 1rem !important;
+  }
+  
+  /* Fix large margins and paddings */
+  [style*="margin-bottom: 3rem"],
+  [style*="margin-top: 3rem"] {
+    margin-bottom: 2rem !important;
+    margin-top: 2rem !important;
+  }
+  
+  [style*="padding: 3rem"],
+  [style*="padding: 4rem"] {
+    padding: 1.5rem !important;
+  }
+  
+  /* Fix font sizes that are too large */
+  [style*="font-size: 3rem"],
+  [style*="font-size: 2.5rem"] {
+    font-size: 2rem !important;
+  }
+  
+  /* Ensure images don't overflow */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Fix certificate images */
+  .cert-image-box {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .cert-image-box img,
+  .cert-image-box iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Fix hero image on mobile */
+  .hero-image-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Fix project cards */
+  .gradient-card,
+  .glass-card {
+    padding: 1rem !important;
+  }
+  
+  .gradient-card h3,
+  .glass-card h3 {
+    font-size: 1.1rem !important;
+    line-height: 1.4;
+  }
+  
+  /* Fix button groups */
+  .hero-actions,
+  .btn-group,
+  [style*="display: flex"][style*="gap"] .btn {
+    width: 100%;
+  }
+  
+  /* Fix social links */
+  .social-links {
+    justify-content: center !important;
+    gap: 1rem !important;
+  }
+  
+  /* Fix navigation */
+  .nav-brand {
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Fix form inputs */
+  .form-input,
+  .form-textarea,
+  .form-select {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+  }
+  
+  /* Fix tables */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Fix pre and code blocks */
+  pre,
+  code {
+    overflow-x: auto;
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Fix skill items */
+  .skill-item {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  /* Fix badges overflow */
+  .badge {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  
+  /* Fix section headers */
+  .section-header {
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+  
+  .section-title {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Fix CTA sections */
+  .glass-card-strong [style*="padding: 4rem"] {
+    padding: 2rem 1rem !important;
+  }
+  
+  /* Fix decorative elements that might overflow */
+  [style*="position: absolute"][style*="width: 300px"] {
+    display: none;
+  }
+}
+
+/* Landscape mobile fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: auto !important;
+    padding: 2rem 0 !important;
+  }
+  
+  .section {
+    padding: 3rem 0 !important;
+  }
+  
+  .hero-image {
+    display: none;
+  }
+}
+
+/* Very small screens (iPhone SE, small Android phones) */
+@media (max-width: 375px) {
+  .container {
+    padding: 0 1rem !important;
+  }
+  
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .hero-title {
+    font-size: 1.35rem !important;
+  }
+  
+  h3 {
+    font-size: 1rem !important;
+  }
+  
+  .btn,
+  .btn-lg {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  .badge {
+    font-size: 0.6rem !important;
+    padding: 0.15rem 0.4rem !important;
+  }
+}
+
+/* Fix for Safari iOS */
+@supports (-webkit-touch-callout: none) {
+  .glass-card,
+  .gradient-card {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Fix for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets */
+  .btn,
+  .nav-link,
+  .filter-btn,
+  .social-link {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Remove hover effects on touch */
+  .hover-lift:hover,
+  .glass-card:hover,
+  .gradient-card:hover {
+    transform: none !important;
+  }
+}

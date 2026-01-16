@@ -1,0 +1,51 @@
+{
+  "name": "Mohammad Ali Yusefi - Electronic & Electrical Engineer",
+  "short_name": "M. Ali Yusefi",
+  "description": "Professional portfolio of Mohammad Ali Yusefi - Electronic & Electrical Engineer specializing in power systems, renewable energy, ICT, and cybersecurity.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0e1a",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/profile.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "education", "productivity"],
+  "lang": "en",
+  "dir": "ltr",
+  "screenshots": [
+    {
+      "src": "assets/profile.svg",
+      "sizes": "540x720",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Resume",
+      "short_name": "Resume",
+      "description": "View Mohammad Ali Yusefi's resume",
+      "url": "/resume.html",
+      "icons": [{ "src": "assets/profile.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Projects",
+      "short_name": "Projects",
+      "description": "View portfolio projects",
+      "url": "/projects.html",
+      "icons": [{ "src": "assets/profile.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch",
+      "url": "/contact.html",
+      "icons": [{ "src": "assets/profile.svg", "sizes": "96x96" }]
+    }
+  ]
+}

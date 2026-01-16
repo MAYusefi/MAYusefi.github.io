@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional certificates and qualifications of Mohammad Ali Yusefi - PSEA, Fraud Awareness, and technical certifications." />
+  <title>Certificates | Mohammad Ali Yusefi</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/mobile-fixes.css" />
+  
+  <style>
+    /* Filter System */
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+      padding: 0.5rem 1.5rem;
+      border-radius: var(--radius-full);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      transition: all var(--transition-base);
+      font-weight: 500;
+    }
+    
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--color-primary);
+      color: white;
+      border-color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Certificate Card Design - Image Based */
+    .cert-card-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 0.5rem;
+    }
+    
+    .cert-image-box {
+      width: 100%;
+      background: transparent;
+      border-radius: var(--radius-lg);
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--color-border);
+    }
+    
+    .cert-image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    /* For landscape/wide certificates that need to show completely */
+    .cert-image-box.landscape-cert {
+      background: transparent;
+    }
+    .cert-image-box.landscape-cert img {
+      width: 100%;
+      height: auto;
+    }
+
+    .cert-image-box.pdf-preview {
+      background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-surface) 100%);
+    }
+    
+    .cert-item:hover .cert-image-box img {
+      transform: scale(1.05);
+    }
+    
+    .cert-item:hover .cert-image-box {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary-light);
+    }
+    
+    .cert-icon {
+      font-size: 4rem;
+      transition: transform 0.4s ease;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+    
+    .cert-item:hover .cert-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .cert-details {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 0 0.5rem 0.5rem 0.5rem;
+    }
+
+    .cert-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-size: var(--font-size-sm);
+      color: var(--color-text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .cert-title {
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+    
+    .cert-desc {
+      color: var(--color-text-secondary);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-brand">Mohammad Ali Yusefi</a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="resume.html" class="nav-link">Resume</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="skills.html" class="nav-link">Skills</a></li>
+          <li><a href="certificates.html" class="nav-link active">Certificates</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg><svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"/></svg>
+          </button>
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" title="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h1 class="section-title">Professional Credentials</h1>
+          <p class="section-subtitle">Verified certifications in Engineering, Management, and Development</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-container reveal stagger-1">
+          <button class="filter-btn active" data-filter="all">All Credentials</button>
+          <button class="filter-btn" data-filter="engineering">Engineering</button>
+          <button class="filter-btn" data-filter="management">Management & UN</button>
+          <button class="filter-btn" data-filter="volunteer">Volunteer</button>
+          <button class="filter-btn" data-filter="language">Language</button>
+        </div>
+
+        <!-- Certificates Grid -->
+        <div class="grid grid-responsive" id="cert-grid">
+          
+          <!-- Certificate 1: ChemTala Substation -->
+          <div class="glass-card reveal stagger-1 hover-lift cert-item" data-category="engineering">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <img src="certificates/Practical Training in Substation (Electrical  Power).jpg" alt="ChemTala Substation Certificate" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">ChemTala Substation</span>
+                  <span class="cert-year">2017 - 2018</span>
+                </div>
+                <h3 class="cert-title">Practical Training in Substation (Electrical / Power)</h3>
+                <p class="cert-desc">
+                  60-day intensive practical training in critical power infrastructure. Hands-on experience with substation maintenance, technical operations, and grid management under Eng. Ghulam Jailani.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-primary">Electrical Engineering</span>
+                  <span class="badge">Power Systems</span>
+                  <span class="badge">Maintenance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 2: Professional Proposal Writing -->
+          <div class="glass-card reveal stagger-2 hover-lift cert-item" data-category="management">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <img src="certificates/Professional Proposal Writing (PPW).jpg" alt="Proposal Writing Certificate" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">PMIP (Lazuli Pamir)</span>
+                  <span class="cert-year">2025</span>
+                </div>
+                <h3 class="cert-title">Professional Proposal Writing (PPW)</h3>
+                <p class="cert-desc">
+                  Advanced certification in drafting competitive, donor-compliant proposals. Covered grant writing, project coordination, and logical framework analysis under PMI standards.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-success">Project Management</span>
+                  <span class="badge">Grant Writing</span>
+                  <span class="badge">NGO/UN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 3: Fraud Awareness -->
+          <div class="glass-card reveal stagger-3 hover-lift cert-item" data-category="management">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <iframe src="certificates/Fraud_awareness_partners_Course certificate.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Fraud Awareness Certificate" style="width: 100%; height: 100%; border: none; pointer-events: none; overflow: hidden;" scrolling="no"></iframe>
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">UN & UNICEF</span>
+                  <span class="cert-year">2025</span>
+                </div>
+                <h3 class="cert-title">Fraud Awareness (Implementing Partners Edition)</h3>
+                <p class="cert-desc">
+                  Specialized training on fraud detection, prevention, and compliance for UN implementing partners. Covers risk management, ethics, and financial accountability standards.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-success">Risk Management</span>
+                  <span class="badge">UN Compliance</span>
+                  <span class="badge">Ethics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 4: PSEA -->
+          <div class="glass-card reveal stagger-4 hover-lift cert-item" data-category="management">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <iframe src="certificates/PSEA2020_Course certificate - PSEA 2020.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="PSEA Certificate" style="width: 100%; height: 100%; border: none; pointer-events: none; overflow: hidden;" scrolling="no"></iframe>
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">UNICEF</span>
+                  <span class="cert-year">2025</span>
+                </div>
+                <h3 class="cert-title">Prevention of Sexual Exploitation and Abuse (PSEA)</h3>
+                <p class="cert-desc">
+                  Mandatory UN training on safeguarding, protection, and ethical conduct. Certifies capability to operate within UN/NGO frameworks regarding PSEA protocols.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-success">Safeguarding</span>
+                  <span class="badge">Humanitarian Ethics</span>
+                  <span class="badge">UN Standards</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 5: Isteqlal Appreciation -->
+          <div class="glass-card reveal stagger-5 hover-lift cert-item" data-category="engineering">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <img src="certificates/ISTEQLAL CERTIFICATE.JPG" alt="Isteqlal Institute of Higher Education Appreciation" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">Isteqlal Institute of Higher Education</span>
+                  <span class="cert-year">2023</span>
+                </div>
+                <h3 class="cert-title">Appreciation Letter - Academic Leadership</h3>
+                <p class="cert-desc">
+                  Official recognition as Head of Electrical Engineering Department for technical expertise and educational leadership. Commended for bridging academic theory with practical application.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-primary">Academic Leadership</span>
+                  <span class="badge">Education</span>
+                  <span class="badge">Community Service</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 6: Moderation Wave Membership -->
+          <div class="glass-card reveal stagger-6 hover-lift cert-item" data-category="management">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <iframe src="certificates/Moderation Wave and Alignment Institution id card.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Membership Card" style="width: 100%; height: 100%; border: none; pointer-events: none; overflow: hidden;" scrolling="no"></iframe>
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">Moderation Wave</span>
+                  <span class="cert-year">2021</span>
+                </div>
+                <h3 class="cert-title">Membership - Civil Society Organization</h3>
+                <p class="cert-desc">
+                  Active member of a civil society organization focused on social moderation, human rights, and public awareness. Engaged in community development and countering extremism.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-success">Civil Society</span>
+                  <span class="badge">Human Rights</span>
+                  <span class="badge">Social Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 8: Rabia Balkhi University Volunteer Appreciation -->
+          <div class="glass-card reveal stagger-8 hover-lift cert-item" data-category="volunteer">
+            <div class="cert-card-content">
+              <div class="cert-image-box landscape-cert">
+                <img src="certificates/Rabia Balkhi Volunteer Certificate.jpg" alt="Rabia Balkhi University Volunteer Certificate" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">Rabia Balkhi University</span>
+                  <span class="cert-year">2022</span>
+                </div>
+                <h3 class="cert-title">Volunteer Appreciation Certificate</h3>
+                <p class="cert-desc">
+                  Awarded for dedication to teaching students with special needs and invaluable voluntary service. Voluntarily taught for 2 semesters (Jul 2021 – Aug 2022), 6 hours per week. Signed by Dean Mohammad Erfani, Engineering Faculty.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-success">Volunteer Teaching</span>
+                  <span class="badge">Special Needs</span>
+                  <span class="badge">Education</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 9: Project Management - Save the Children -->
+          <div class="glass-card reveal stagger-9 hover-lift cert-item" data-category="management">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <img src="certificates/Certificate_Project_Management_Save_the_Children_2025.jpg" alt="Project Management Training Certificate" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">Save the Children</span>
+                  <span class="cert-year">2025</span>
+                </div>
+                <h3 class="cert-title">Project Management Training</h3>
+                <p class="cert-desc">
+                  Professional training program focused on strengthening skills in planning, managing, and successfully implementing development and humanitarian projects. Duration: November 17–19, 2025.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-success">Project Management</span>
+                  <span class="badge">Humanitarian</span>
+                  <span class="badge">Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 10: Academic Appreciation - Afghan Smart Financial -->
+          <div class="glass-card reveal stagger-10 hover-lift cert-item" data-category="management">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <img src="certificates/Appreciation_Letter_Academic_Excellence_ASFCS_2024.jpg" alt="Academic Appreciation Certificate" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">Afghan Smart Financial Consultancy</span>
+                  <span class="cert-year">2024</span>
+                </div>
+                <h3 class="cert-title">Appreciation Letter - Financial Services</h3>
+                <p class="cert-desc">
+                  Awarded in recognition of outstanding dedication and valuable contributions to financial consultancy services and professional practice.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-success">Financial Services</span>
+                  <span class="badge">Recognition</span>
+                  <span class="badge">Professional</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 11: QuickBooks Desktop Training -->
+          <div class="glass-card reveal stagger-11 hover-lift cert-item" data-category="management">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <img src="certificates/Certificate_of_Excellence_QuickBooks_Desktop_Training_2024.jpg" alt="QuickBooks Training Certificate" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">Afghan Smart Financial Advisor</span>
+                  <span class="cert-year">2024</span>
+                </div>
+                <h3 class="cert-title">Certificate of Excellence - QuickBooks Desktop Training</h3>
+                <p class="cert-desc">
+                  Awarded for successful completion of a one-month QuickBooks Desktop Training Program, demonstrating strong competency in accounting systems, financial management, and professional practice.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-success">QuickBooks</span>
+                  <span class="badge">Accounting</span>
+                  <span class="badge">Financial Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 12: Cybersecurity Training - CIVICUS -->
+          <div class="glass-card reveal stagger-12 hover-lift cert-item" data-category="management">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <img src="certificates/Certificate_Cybersecurity_Training_CIVICUS_DDI_2025.jpg" alt="Cybersecurity Training Certificate" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">CIVICUS & Digital Democracy Initiative</span>
+                  <span class="cert-year">2025</span>
+                </div>
+                <h3 class="cert-title">Cybersecurity Training Workshop</h3>
+                <p class="cert-desc">
+                  Successfully completed a two-day Cybersecurity Training Workshop focused on cybersecurity awareness, digital safety, and resilience, conducted under the Digital Resiliency Grants Project.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-success">Cybersecurity</span>
+                  <span class="badge">Digital Safety</span>
+                  <span class="badge">Resilience</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 13: Academic Appreciation - Esteqlal Institute -->
+          <div class="glass-card reveal stagger-13 hover-lift cert-item" data-category="engineering">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <img src="certificates/Appreciation_Certificate_Esteqlal_Higher_Education_Institute.jpg" alt="Esteqlal Institute Appreciation Certificate" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">Esteqlal Institute of Higher Education</span>
+                  <span class="cert-year">2023</span>
+                </div>
+                <h3 class="cert-title">Academic & Cultural Appreciation</h3>
+                <p class="cert-desc">
+                  Awarded in appreciation of active participation and meaningful contributions to scientific, cultural, and academic activities within the academic community.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-primary">Academic Recognition</span>
+                  <span class="badge">Cultural Activities</span>
+                  <span class="badge">Leadership</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 14: Academic Appreciation - Alberoni University -->
+          <div class="glass-card reveal stagger-14 hover-lift cert-item" data-category="engineering">
+            <div class="cert-card-content">
+              <div class="cert-image-box">
+                <img src="certificates/Academic_Appreciation_Alberoni_University_2018.jpg" alt="Alberoni University Appreciation Certificate" loading="lazy">
+              </div>
+              <div class="cert-details">
+                <div class="cert-meta">
+                  <span class="cert-issuer">Alberoni University</span>
+                  <span class="cert-year">2018</span>
+                </div>
+                <h3 class="cert-title">Academic Appreciation - Academic Excellence</h3>
+                <p class="cert-desc">
+                  Awarded by Ministry of Higher Education in recognition of academic achievement, dedication, and excellence during the academic year, reflecting strong performance and commitment to higher education.
+                </p>
+                <div class="flex gap-2 flex-wrap mt-auto">
+                  <span class="badge badge-primary">Academic Honor</span>
+                  <span class="badge">Excellence</span>
+                  <span class="badge">Higher Education</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Mohammad Ali Yusefi</h4>
+          <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">
+            Full-Stack Business System Engineer building SaaS platforms, admin panels & dashboards.
+          </p>
+          <div class="social-links">
+            <a href="mailto:Ali.yusefi.ee@gmail.com" class="social-link" aria-label="Send email" title="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+            <a href="https://www.linkedin.com/in/mohammad-ali-yusefi" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+            <a href="https://github.com/MAYusefi" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:Ali.yusefi.ee@gmail.com">Ali.yusefi.ee@gmail.com</a></li>
+            <li>+93 749 030 730</li>
+            <li>Street 4, Taimani Project, District 4, Kabul, Afghanistan</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Mohammad Ali Yusefi — Full-Stack Business System Engineer. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <link rel="manifest" href="manifest.json">
+  <script src="js/main.js"></script>
+  
+  <script>
+    // Filter Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const certItems = document.querySelectorAll('.cert-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        const filterValue = btn.getAttribute('data-filter');
+        
+        certItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+            // Add animation
+            item.classList.remove('reveal');
+            void item.offsetWidth; // Trigger reflow
+            item.classList.add('reveal');
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    if('serviceWorker' in navigator){
+      window.addEventListener('load',()=>{
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
+</body>
+</html>

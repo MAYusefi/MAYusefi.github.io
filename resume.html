@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional resume of Mohammad Ali Yusefi - Full-Stack Business System Engineer specializing in SaaS platforms, admin panels & dashboards with Next.js, React & Firebase." />
+  <title>Resume | Mohammad Ali Yusefi - Full-Stack Business System Engineer</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/mobile-fixes.css" />
+  
+  <style>
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      border: 3px solid var(--color-bg-primary);
+      box-shadow: 0 0 0 3px var(--color-primary);
+    }
+    
+    .timeline-item:hover::before {
+      transform: scale(1.3);
+      transition: transform var(--transition-base);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-brand">Mohammad Ali Yusefi</a>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li><a href="resume.html" class="nav-link" data-i18n="nav_resume">Resume</a></li>
+          <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="skills.html" class="nav-link" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="certificates.html" class="nav-link" data-i18n="nav_certificates">Certificates</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg><svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1z"/></svg>
+          </button>
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Header Section -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="glass-card reveal" style="text-align: center; padding: 3rem;">
+          <div style="display: inline-block; margin-bottom: 1rem;">
+            <img src="assets/profile.jpg" alt="Mohammad Ali Yusefi" style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid var(--color-primary); object-fit: cover;" loading="lazy" />
+          </div>
+          <h1 class="heading-2" style="margin-bottom: 0.5rem;" data-i18n="hero_title">Mohammad Ali Yusefi</h1>
+          <p class="text-gradient" style="font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); margin-bottom: 1rem;" data-i18n="hero_badge">
+            Electronic & Electrical Engineer
+          </p>
+          <p style="color: var(--color-text-secondary); max-width: 700px; margin: 0 auto 2rem;" data-i18n="hero_description">
+            <span data-lang-en="Results-driven engineer with 7+ years of experience in teaching, project coordination, and technical leadership. Passionate about renewable energy, ICT, and community development." data-lang-dari="مهندس نتیجه‌محور با بیش از 7 سال تجربه در تدریس، هماهنگی پروژه و رهبری فنی. علاقه‌مند به انرژی تجدیدپذیر، فناوری اطلاعات و توسعه جامعه.">Results-driven engineer with 7+ years of experience in teaching, project coordination, and technical leadership. Passionate about renewable energy, ICT, and community development.</span>
+          </p>
+          <div class="flex gap-4" style="justify-content: center; flex-wrap: wrap;">
+            <a href="assets/Mohammad Ali Yusefi - Professional CV.pdf" 
+               target="_blank"
+               download
+               class="btn btn-primary btn-lg"
+               title="Download Professional CV (PDF)">
+              Download CV
+            </a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title" data-lang-en="Work Experience" data-lang-dari="تجربه کاری">Work Experience</h2>
+          <p class="section-subtitle">Web Developer | Electronic & Electrical Engineer | Academic Leader | Humanitarian Program Coordinator</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item reveal">
+            <div class="gradient-card hover-lift">
+              <div class="flex items-start justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <h3 style="margin-bottom: 0.25rem;">Program Assistant (Multi-Donor Programs)</h3>
+                  <p class="text-secondary" style="font-weight: var(--font-weight-medium);">Rah-e-Rahnaward Social Welfare Organization (RRSWO)</p>
+                </div>
+                <div style="text-align: right;">
+                  <span class="badge badge-success">Current</span>
+                  <p class="text-muted" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">Aug 2024 – Present</p>
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Kabul, Afghanistan</p>
+                </div>
+              </div>
+              <div class="divider-gradient" style="margin: 1rem 0;"></div>
+              <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+                Provide programmatic and coordination support to multi-donor humanitarian and development projects implemented by RRSWO in the education, women and child protection, and emergency response sectors.
+              </p>
+              <ul style="color: var(--color-text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                <li><strong>Education Programs:</strong> Support implementation of CBE projects funded by UNICEF and CRS, CBE/ALP programs through GPE with Save the Children as Grant Agent, and Remedial Classes funded by GPE and AKF.</li>
+                <li><strong>Emergency Response & Women's Empowerment:</strong> Coordinate UN Women–funded projects including cash assistance, MHPSS services, women's safe spaces, and case management.</li>
+                <li><strong>Program Planning, Budgeting & Multi-Donor Management:</strong> Prepare activity plans, track budget utilization, and maintain project documentation in line with donor requirements.</li>
+                <li><strong>Monitoring, Evaluation & Accountability (AAP/CFM):</strong> Support data collection, verification, Community Feedback Mechanisms, and compliance with donor standards.</li>
+                <li><strong>Field Coordination & Partner Engagement:</strong> Conduct field monitoring visits, assessments, and coordination meetings with local authorities and implementing partners.</li>
+                <li><strong>Compliance, Reporting & Safeguarding:</strong> Prepare periodic reports for UNICEF, UN Women, CRS, Save the Children, and AKF; ensure adherence to PSEA, child protection, and inclusion principles.</li>
+              </ul>
+              <div class="flex gap-2" style="margin-top: 1rem; flex-wrap: wrap;">
+                <span class="badge">Multi-Donor Coordination</span>
+                <span class="badge">Emergency Response</span>
+                <span class="badge">MEAL & Compliance</span>
+                <span class="badge">PSEA & Safeguarding</span>
+                <span class="badge">Field Operations</span>
+                <span class="badge">AAP/CFM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item reveal">
+            <div class="gradient-card hover-lift">
+              <div class="flex items-start justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <h3 style="margin-bottom: 0.25rem;">Finance Assistant</h3>
+                  <p class="text-secondary" style="font-weight: var(--font-weight-medium);">Afghanistan Organization Women Arise (AOWA) — Women-Headed Households Project (UNDP-Funded)</p>
+                </div>
+                <div style="text-align: right;">
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Jan 2024 – Jul 2024</p>
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Kabul</p>
+                </div>
+              </div>
+              <div class="divider-gradient" style="margin: 1rem 0;"></div>
+              <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+                Supported financial operations of a UNDP-funded women's empowerment project, ensuring compliance with UN financial policies and donor requirements.
+              </p>
+              <ul style="color: var(--color-text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                <li>Processed project payment vouchers, payment requests, and procurement documentation using QuickBooks in line with UNDP procedures.</li>
+                <li>Prepared and consolidated monthly, quarterly, and final financial reports for internal review and UNDP monitoring and audit purposes.</li>
+                <li>Maintained accurate and well-organized records of project expenditures, receipts, and supporting documentation.</li>
+                <li>Coordinated with vendors and suppliers to facilitate timely and compliant procurement and payment processing.</li>
+                <li>Supported the financial audit process by preparing required documentation and responding to audit queries.</li>
+                <li>Worked closely with program staff to support budget tracking and fund utilization monitoring.</li>
+              </ul>
+              <div class="flex gap-2" style="margin-top: 1rem; flex-wrap: wrap;">
+                <span class="badge">QuickBooks</span>
+                <span class="badge">Financial Reporting</span>
+                <span class="badge">Audit Readiness</span>
+                <span class="badge">Budget Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="timeline-item reveal">
+            <div class="gradient-card hover-lift">
+              <div class="flex items-start justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <h3 style="margin-bottom: 0.25rem;">Dean of Engineering / Lecturer (Electrical Engineering)</h3>
+                  <p class="text-secondary" style="font-weight: var(--font-weight-medium);">Isteqlal Institute of Higher Education</p>
+                </div>
+                <div style="text-align: right;">
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Jan 2022 – Dec 2023</p>
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Kabul, Afghanistan</p>
+                </div>
+              </div>
+              <div class="divider-gradient" style="margin: 1rem 0;"></div>
+              <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+                Led the academic and operational functions of the Faculty of Engineering, overseeing curriculum delivery, teaching quality, and day-to-day coordination of academic activities.
+              </p>
+              <ul style="color: var(--color-text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                <li>Delivered undergraduate courses in Power Systems, Renewable Energy, and Electrical Machines, combining theoretical instruction with laboratory-based learning.</li>
+                <li>Coordinated faculty members and academic schedules to ensure effective course delivery and compliance with institutional and Ministry of Higher Education requirements.</li>
+                <li>Supported curriculum development, course planning, and quality assurance processes for engineering programs.</li>
+                <li>Oversaw the introduction and use of laboratory equipment and practical training modules to strengthen applied engineering education.</li>
+                <li>Served as the focal point with the Ministry of Higher Education for accreditation, reporting, and compliance related to engineering programs.</li>
+              </ul>
+              <div class="flex gap-2" style="margin-top: 1rem; flex-wrap: wrap;">
+                <span class="badge">Academic Leadership</span>
+                <span class="badge">Curriculum Development</span>
+                <span class="badge">Teaching</span>
+                <span class="badge">Quality Assurance</span>
+                <span class="badge">Accreditation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 4 -->
+          <div class="timeline-item reveal">
+            <div class="gradient-card hover-lift">
+              <div class="flex items-start justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <h3 style="margin-bottom: 0.25rem;">Head of Electrical Engineering Department / Lecturer</h3>
+                  <p class="text-secondary" style="font-weight: var(--font-weight-medium);">Isteqlal Institute of Higher Education</p>
+                </div>
+                <div style="text-align: right;">
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Jul 2019 – Dec 2021</p>
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Kabul, Afghanistan</p>
+                </div>
+              </div>
+              <div class="divider-gradient" style="margin: 1rem 0;"></div>
+              <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+                Led and managed the Electrical Engineering Department, overseeing academic planning, course delivery, and day-to-day departmental operations.
+              </p>
+              <ul style="color: var(--color-text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                <li>Taught undergraduate courses in Power Systems, Circuit Analysis, Control Systems, and Renewable Energy, combining theoretical instruction with practical applications.</li>
+                <li>Coordinated and supported faculty members to ensure effective teaching, fair assessment, and consistent academic standards.</li>
+                <li>Supervised the use and improvement of electrical engineering laboratories, supporting hands-on learning and student projects.</li>
+                <li>Managed student enrollment, class schedules, examinations, and graduation requirements at the department level.</li>
+                <li>Supervised and advised students on graduation projects and academic progress.</li>
+                <li>Worked with institutional leadership and the Ministry of Higher Education to ensure compliance with academic and accreditation requirements.</li>
+              </ul>
+              <div class="flex gap-2" style="margin-top: 1rem; flex-wrap: wrap;">
+                <span class="badge">Department Leadership</span>
+                <span class="badge">Teaching</span>
+                <span class="badge">Faculty Coordination</span>
+                <span class="badge">Lab Management</span>
+                <span class="badge">Student Supervision</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 5 & 6 -->
+          <div class="timeline-item reveal">
+            <div class="gradient-card hover-lift">
+              <h3 style="margin-bottom: 1rem;">Additional Academic Appointments (Part-Time / Contract)</h3>
+              
+              <div style="margin-bottom: 2rem;">
+                <div class="flex items-start justify-between" style="margin-bottom: 0.5rem;">
+                  <div>
+                    <strong>Part-Time Lecturer (Electrical Engineering)</strong>
+                    <p class="text-secondary" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">Isteqlal Institute of Higher Education</p>
+                  </div>
+                  <span class="text-muted" style="font-size: var(--font-size-sm);">Apr 2024 – Present</span>
+                </div>
+                <p style="color: var(--color-text-secondary); margin-bottom: 0.5rem;">
+                  Deliver scheduled undergraduate courses in Power Systems, Renewable Energy, and Electrical Machines on a part-time basis following completion of administrative leadership role.
+                </p>
+                <p style="color: var(--color-text-secondary); margin-bottom: 0.5rem;">
+                  Teach limited credit-load courses during designated time slots, supporting continuity of academic programs and student learning.
+                </p>
+                <div class="flex gap-2" style="flex-wrap: wrap;">
+                  <span class="badge">Power Systems</span>
+                  <span class="badge">Renewable Energy</span>
+                  <span class="badge">Electrical Machines</span>
+                </div>
+              </div>
+
+              <div class="divider-gradient" style="margin: 1.5rem 0;"></div>
+
+              <div style="margin-bottom: 2rem;">
+                <div class="flex items-start justify-between" style="margin-bottom: 0.5rem;">
+                  <div>
+                    <strong>Part-Time Lecturer</strong>
+                    <p class="text-secondary" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">Aburayhan Institute of Higher Education</p>
+                  </div>
+                  <span class="text-muted" style="font-size: var(--font-size-sm);">Mar 2024 – Dec 2024</span>
+                </div>
+                <p style="color: var(--color-text-secondary); margin-bottom: 0.5rem;">
+                  Delivered scheduled undergraduate courses in Energy Conversion, Telecommunication Systems, Computer Fundamentals, and Electrical Machines under a part-time academic contract, supporting both theoretical and practical learning.
+                </p>
+                <div class="flex gap-2" style="flex-wrap: wrap;">
+                  <span class="badge">Energy Conversion</span>
+                  <span class="badge">Telecommunication Systems</span>
+                  <span class="badge">Computer Fundamentals</span>
+                  <span class="badge">Electrical Machines</span>
+                </div>
+              </div>
+
+              <div class="divider-gradient" style="margin: 1.5rem 0;"></div>
+
+              <div style="margin-bottom: 2rem;">
+                <div class="flex items-start justify-between" style="margin-bottom: 0.5rem;">
+                  <div>
+                    <strong>Part-Time Lecturer</strong>
+                    <p class="text-secondary" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">Rabia Balkhi University</p>
+                  </div>
+                  <span class="text-muted" style="font-size: var(--font-size-sm);">Mar 2020 – Jan 2021</span>
+                </div>
+                <p style="color: var(--color-text-secondary); margin-bottom: 0.5rem;">
+                  Taught Computer Programming, Power Plant Engineering, Renewable Energy, and Electricity Conversion as a part-time lecturer while holding a full-time academic leadership position elsewhere.
+                </p>
+                <div class="flex gap-2" style="flex-wrap: wrap;">
+                  <span class="badge">Computer Programming</span>
+                  <span class="badge">Power Plant Engineering</span>
+                  <span class="badge">Renewable Energy</span>
+                  <span class="badge">Electricity Conversion</span>
+                </div>
+              </div>
+
+              <div class="divider-gradient" style="margin: 1.5rem 0;"></div>
+
+              <div>
+                <div class="flex items-start justify-between" style="margin-bottom: 0.5rem;">
+                  <div>
+                    <strong>Contract Lecturer (Computer Fundamentals)</strong>
+                    <p class="text-secondary" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">Afghan Swiss Institute of Medical Technology</p>
+                  </div>
+                  <span class="text-muted" style="font-size: var(--font-size-sm);">Aug 2021 – Aug 2022</span>
+                </div>
+                <p style="color: var(--color-text-secondary); margin-bottom: 0.5rem;">
+                  Delivered Computer Fundamentals and IT Basics to medical technology students under a fixed-term teaching contract, contributing to students' digital literacy and technical competence.
+                </p>
+                <div class="flex gap-2" style="flex-wrap: wrap;">
+                  <span class="badge">Computer Fundamentals</span>
+                  <span class="badge">IT Basics</span>
+                  <span class="badge">Digital Literacy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 7 -->
+          <div class="timeline-item reveal">
+            <div class="gradient-card hover-lift">
+              <div class="flex items-start justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <h3 style="margin-bottom: 0.25rem;">Electrical Engineering Intern</h3>
+                  <p class="text-secondary" style="font-weight: var(--font-weight-medium);">Chamtala Substation</p>
+                </div>
+                <div style="text-align: right;">
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Aug 2018 – Oct 2018</p>
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Afghanistan</p>
+                </div>
+              </div>
+              <div class="divider-gradient" style="margin: 1rem 0;"></div>
+              <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+                Hands-on training in power distribution and substation operations.
+              </p>
+              <ul style="color: var(--color-text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                <li>Assisted in maintenance and installation of substation equipment</li>
+                <li>Monitored transformer operations and voltage levels</li>
+                <li>Prepared technical reports and equipment logs</li>
+                <li>Learned safety procedures and industry best practices</li>
+              </ul>
+              <div class="flex gap-2" style="margin-top: 1rem; flex-wrap: wrap;">
+                <span class="badge">Power Distribution</span>
+                <span class="badge">Substation Operations</span>
+                <span class="badge">Maintenance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteer Experience -->
+    <section class="section" style="background: var(--color-bg-secondary);">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Volunteer Experience</h2>
+          <p class="section-subtitle">Community service and humanitarian contributions</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Volunteer 1: Education Cluster -->
+          <div class="timeline-item reveal">
+            <div class="gradient-card hover-lift" style="border-left: 4px solid var(--color-success);">
+              <div class="flex items-start justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <h3 style="margin-bottom: 0.25rem;">Volunteer Data Collector</h3>
+                  <p class="text-secondary" style="font-weight: var(--font-weight-medium);">Education Cluster — UNICEF/UNESCO</p>
+                </div>
+                <div style="text-align: right;">
+                  <span class="badge badge-primary">Volunteer</span>
+                  <p class="text-muted" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">Oct 2025 – Nov 2025</p>
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Kabul, Afghanistan</p>
+                </div>
+              </div>
+              <div class="divider-gradient" style="margin: 1rem 0;"></div>
+              <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+                One-month volunteer engagement with the Education Cluster supporting the registration and enrollment of returnee children from Iran and Pakistan who have been out of school.
+              </p>
+              <ul style="color: var(--color-text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                <li>Collected and registered data of migrant children returning from Iran and Pakistan</li>
+                <li>Identified out-of-school children and assessed their educational needs</li>
+                <li>Coordinated with local schools and education authorities for enrollment</li>
+                <li>Prepared detailed reports on returnee children demographics and education status</li>
+                <li>Supported families in understanding school enrollment procedures</li>
+              </ul>
+              <div class="flex gap-2" style="margin-top: 1rem; flex-wrap: wrap;">
+                <span class="badge">Data Collection</span>
+                <span class="badge">Child Protection</span>
+                <span class="badge">Education Access</span>
+                <span class="badge">Humanitarian Work</span>
+                <span class="badge">Community Outreach</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Volunteer 2: Rabia Balkhi University -->
+          <div class="timeline-item reveal">
+            <div class="gradient-card hover-lift" style="border-left: 4px solid var(--color-primary);">
+              <div class="flex items-start justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                  <h3 style="margin-bottom: 0.25rem;">Volunteer Lecturer — Special Needs Education</h3>
+                  <p class="text-secondary" style="font-weight: var(--font-weight-medium);">Rabia Balkhi University — Engineering Faculty</p>
+                </div>
+                <div style="text-align: right;">
+                  <span class="badge badge-success">Appreciation Certificate</span>
+                  <p class="text-muted" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">Jul 2021 – Aug 2022</p>
+                  <p class="text-muted" style="font-size: var(--font-size-sm);">Kabul, Afghanistan</p>
+                </div>
+              </div>
+              <div class="divider-gradient" style="margin: 1rem 0;"></div>
+              <p style="color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+                Awarded Volunteer Appreciation Certificate in grateful recognition for dedication to teaching students with special needs and invaluable voluntary service to Rabia Balkhi University.
+              </p>
+              <ul style="color: var(--color-text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                <li>Voluntarily taught for 2 academic semesters (6 hours per week)</li>
+                <li>Provided specialized support for students with special needs</li>
+                <li>Delivered courses in engineering subjects with adaptive teaching methods</li>
+                <li>Contributed to inclusive education initiatives at the university</li>
+                <li>Received official appreciation from Dean Mohammad Erfani</li>
+              </ul>
+              <div class="flex gap-2" style="margin-top: 1rem; flex-wrap: wrap;">
+                <span class="badge badge-primary">Volunteer Teaching</span>
+                <span class="badge badge-success">Special Needs Education</span>
+                <span class="badge">Inclusive Education</span>
+                <span class="badge">Academic Support</span>
+                <span class="badge">Community Service</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title" data-lang-en="Education" data-lang-dari="تحصیلات">Education</h2>
+          <p class="section-subtitle">Academic qualifications and professional training</p>
+        </div>
+
+        <div class="grid grid-cols-2 education-grid">
+          <div class="glass-card reveal stagger-1 hover-lift">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-primary);">◆</div>
+            <h3>Computer Science Student</h3>
+            <p class="text-secondary" style="margin: 0.5rem 0;">University of the People</p>
+            <p class="text-muted" style="font-size: var(--font-size-sm);">Current</p>
+            <div class="divider-gradient" style="margin: 1rem 0;"></div>
+            <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">
+              Pursuing a degree in Computer Science to deepen knowledge in software engineering, algorithms, and data structures.
+            </p>
+          </div>
+
+          <div class="glass-card reveal stagger-1 hover-lift">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-primary);">◆</div>
+            <h3>Bachelor of Science in Electronic & Electrical Engineering</h3>
+            <p class="text-secondary" style="margin: 0.5rem 0;">Alberoni University</p>
+            <p class="text-muted" style="font-size: var(--font-size-sm);">Engineering Faculty</p>
+            <p class="text-muted" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">2015 – 2018</p>
+            <div class="divider-gradient" style="margin: 1rem 0;"></div>
+            <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">
+              Comprehensive study of electrical engineering fundamentals including power systems, electronics, control systems, and renewable energy.
+            </p>
+          </div>
+
+          <div class="glass-card reveal stagger-2 hover-lift">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">★</div>
+            <h3>TOEFL Diploma</h3>
+            <p class="text-secondary" style="margin: 0.5rem 0;">Star Educational Society</p>
+            <p class="text-muted" style="font-size: var(--font-size-sm);">English Language Proficiency</p>
+            <p class="text-muted" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">2022</p>
+            <div class="divider-gradient" style="margin: 1rem 0;"></div>
+            <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">
+              Certification demonstrating excellent command of English language for academic and professional purposes.
+            </p>
+          </div>
+
+          <div class="glass-card reveal stagger-3 hover-lift">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--color-primary);">◆</div>
+            <h3>Computer Skills Certificate</h3>
+            <p class="text-secondary" style="margin: 0.5rem 0;">NanoNet Academy</p>
+            <p class="text-muted" style="font-size: var(--font-size-sm);">IT & Software Proficiency</p>
+            <div class="divider-gradient" style="margin: 1rem 0;"></div>
+            <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">
+              Training in computer applications, programming basics, and digital tools essential for modern engineering practice.
+            </p>
+          </div>
+
+          <div class="glass-card reveal stagger-4 hover-lift">
+            
+            <h3>High School Diploma</h3>
+            <p class="text-secondary" style="margin: 0.5rem 0;">Sultan Allauddin High School</p>
+            <p class="text-muted" style="font-size: var(--font-size-sm);">Science Track</p>
+            <p class="text-muted" style="font-size: var(--font-size-sm); margin-top: 0.25rem;">2009 – 2014</p>
+            <div class="divider-gradient" style="margin: 1rem 0;"></div>
+            <p style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">
+              Strong foundation in mathematics, physics, and sciences preparing for engineering education.
+            </p>
+          </div>
+        </div>
+        
+        <style>
+          @media (max-width: 768px) {
+            .education-grid {
+              grid-template-columns: 1fr !important;
+            }
+          }
+        </style>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="glass-card reveal" style="text-align: center; padding: 3rem;">
+          <h2 style="margin-bottom: 1rem;">Need More Details?</h2>
+          <p style="color: var(--color-text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Download my complete resume or explore my technical skills and project portfolio.
+          </p>
+          <div class="flex gap-4" style="justify-content: center; flex-wrap: wrap;">
+            <a href="assets/Mohammad Ali Yusefi - Professional CV.pdf" 
+               target="_blank"
+               download
+               class="btn btn-primary btn-lg"
+               onclick="if(window.portfolioApp) window.portfolioApp.trackDownload('resume-cta')"
+               title="Download Professional CV (PDF)">
+              Download CV
+            </a>
+            <a href="skills.html" class="btn btn-secondary btn-lg">
+              View Skills
+            </a>
+            <a href="projects.html" class="btn btn-ghost btn-lg">
+              View Projects
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Mohammad Ali Yusefi</h4>
+          <p style="color: var(--color-text-secondary); margin-top: 0.5rem;">
+            Web Developer | Electronic & Electrical Engineer | Academic Leader | Humanitarian Program Coordinator
+          </p>
+          <div class="social-links">
+            <a href="mailto:Ali.yusefi.ee@gmail.com" class="social-link" aria-label="Send email" title="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+            <a href="https://www.linkedin.com/in/mohammad-ali-yusefi" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+            <a href="https://github.com/MAYusefi" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4 data-lang-en="Quick Links" data-lang-dari="لینک‌های سریع">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-lang-en="Contact" data-lang-dari="تماس">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:Ali.yusefi.ee@gmail.com">Ali.yusefi.ee@gmail.com</a></li>
+            <li>+93 749 030 730</li>
+            <li>Street 4, Taimani Project, District 4, Kabul, Afghanistan</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-lang-en="© 2025 Mohammad Ali Yusefi — Full-Stack Business System Engineer. All rights reserved." data-lang-dari="© ۲۰۲۵ محمد علی یوسفی — مهندس برق و الکترونیک. تمامی حقوق محفوظ است.">© 2025 Mohammad Ali Yusefi — Full-Stack Business System Engineer. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <link rel="manifest" href="manifest.json">
+  <script src="js/main.js"></script>
+  <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js');});}</script>
+</body>
+</html>
